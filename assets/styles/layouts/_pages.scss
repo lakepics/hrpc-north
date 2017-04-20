@@ -1,0 +1,144 @@
+//
+// Default Page Template Styles
+//
+// Styles for 0up
+.home {
+    .container-fluid {
+        padding: 0;
+        .content {
+            &.row {
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                .main {
+                    .home-content {
+                        min-height: 650px;
+                        background-image: url(''), linear-gradient(#003d6e 100px, #1d6092 300px);
+                        background-color: $dark-blue;
+                        .content-wrapper {
+                            margin-left: auto;
+                            margin-right: auto;
+                            padding: 35px;
+                            width: 1280px;
+                            min-height: 650px;
+                            background-color: $white;
+                            .col-md-8,
+                            .col-md-4 {
+                                padding: 30px;
+                            }
+                        }
+                         :before {
+                            background: transparent url('../images/molecules-homepage-right.png') no-repeat 0 0;
+                            background-size: 100% auto;
+                            content: '';
+                            height: 100%;
+                            position: absolute;
+                            right: 0;
+                            top: -650px;
+                        }
+                         :after {
+                            background: transparent url('../images/molecules-left.png') no-repeat 0 0;
+                            background-size: 100% auto;
+                            content: '';
+                            height: 100%;
+                            left: 0;
+                            position: absolute;
+                            top: -200px;
+                            z-index: 1;
+                        }
+                    }
+                    .quick-links {
+                        background-color: $dark-gray;
+                        height: auto;
+                        min-height: 380px;
+                        padding: 40px 0;
+                        z-index: 900;
+                        .page-container {
+                            margin-left: auto;
+                            margin-right: auto;
+                            height: 100%;
+                            width: 1280px;
+                            display: block;
+                            div {
+                                font-size: 16px;
+                                color: $white;
+                                padding: 10px 50px;
+                                .quick-link-icon {
+                                    font-size: 50px;
+                                    padding-bottom: 20px;
+                                }
+                                p {
+                                    padding-bottom: 20px;
+                                }
+                                a {
+                                    color: $light-blue;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .quick-links:after {
+                        position: absolute;
+                        bottom: 645px;
+                        left: 48%;
+                        content: '\25A0';
+                        transform: rotate(45deg);
+                        font-size: 125px;
+                        color: $dark-gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-template-template-84-two-col-page {
+    background-image: url(''), linear-gradient(#003d6e 100px, #1d6092 300px);
+    background-color: $dark-blue;
+    &.wp-editor {
+        background-image: none;
+        background-color: $white;
+    }
+    .page-header {
+        margin: 0;
+        padding-left: 80px;
+        padding-top: 55px;
+        min-height: 160px;
+        background: $darker-blue;
+        color: $white;
+        h1 {
+            font-family: $sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 106px;
+        }
+    }
+    .wrap {
+        background-image: none;
+        background-color: $white;
+        .main {
+            padding-left: 0;
+            padding-right: 0;
+            .content-wrapper {
+                padding-left: 35px;
+                padding-right: 35px;
+                .col-md-8,
+                .col-md-4 {
+                    padding: 30px;
+                }
+            }
+        }
+    }
+}
+
+// Extra Small Devices, Phones
+@media only screen and (min-width: 480px) {}
+
+// Small Devices, Tablets
+@media only screen and (min-width: 768px) {}
+
+// Medium Devices, Desktops
+@media only screen and (min-width: 992px) {}
+
+// Large Devices, Wide Screens
+@media only screen and (min-width: 1200px) {}

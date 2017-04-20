@@ -1,0 +1,56 @@
+//
+// Footer Styles
+//
+
+// 0up
+footer {
+    background: $dark-blue;
+    color: $white;
+    min-height: 315px;
+    font-size: 18px;
+    .widget {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 50px;
+        width: 1280px;
+        .logo {
+            margin-top: 50px;
+            margin-bottom: 15px;
+            height: 50px;
+        }
+        .phone {
+            a {
+                font-family: $bold-sans-serif;
+                color: $white;
+            }
+        }
+        .fax {
+            span {
+                font-family: $bold-sans-serif;
+            }
+        }
+        p {
+            margin: 0;
+        }
+        a {
+            color: $white;
+        }
+        .copyright {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+
+// Extra Small Devices, Phones
+@media only screen and (min-width : 480px) {}
+
+// Small Devices, Tablets
+@media only screen and (min-width : 768px) {}
+
+// Medium Devices, Desktops
+@media only screen and (min-width : 992px) {}
+
+// Large Devices, Wide Screens
+@media only screen and (min-width : 1200px) {}
