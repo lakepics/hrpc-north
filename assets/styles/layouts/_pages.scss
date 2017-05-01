@@ -13,7 +13,11 @@
                 .main {
                     .home-content {
                         min-height: 650px;
-                        background-image: url(''), linear-gradient(#003d6e 100px, #1d6092 300px);
+                        background-image: url('../images/bg-optimists-takeover.png'), linear-gradient(#003d6e 100px, #1d6092 300px);
+                        background-repeat: no-repeat;
+                        background-position: top left;
+                        background-size: cover;
+                        background-attachment: fixed;
                         background-color: $dark-blue;
                         .content-wrapper {
                             margin-left: auto;
@@ -27,30 +31,11 @@
                                 padding: 30px;
                             }
                         }
-                         :before {
-                            background: transparent url('../images/molecules-homepage-right.png') no-repeat 0 0;
-                            background-size: 100% auto;
-                            content: '';
-                            height: 100%;
-                            position: absolute;
-                            right: 0;
-                            top: -650px;
-                        }
-                         :after {
-                            background: transparent url('../images/molecules-left.png') no-repeat 0 0;
-                            background-size: 100% auto;
-                            content: '';
-                            height: 100%;
-                            left: 0;
-                            position: absolute;
-                            top: -200px;
-                            z-index: 1;
-                        }
                     }
                     .quick-links {
                         background-color: $dark-gray;
                         height: auto;
-                        min-height: 380px;
+                        min-height: 300px;
                         padding: 40px 0;
                         z-index: 900;
                         .page-container {
@@ -93,7 +78,11 @@
 }
 
 .page-template-template-84-two-col-page {
-    background-image: url(''), linear-gradient(#003d6e 100px, #1d6092 300px);
+    background-image: url('../images/bg-optimists-takeover.png'), linear-gradient(#003d6e 100px, #1d6092 300px);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    background-size: cover;
     background-color: $dark-blue;
     &.wp-editor {
         background-image: none;
@@ -102,8 +91,8 @@
     .page-header {
         margin: 0;
         padding-left: 80px;
-        padding-top: 55px;
-        min-height: 160px;
+        padding-top: 35px;
+        min-height: 140px;
         background: $darker-blue;
         color: $white;
         h1 {
@@ -132,13 +121,24 @@
 }
 
 // Extra Small Devices, Phones
-@media only screen and (min-width: 480px) {}
+@media only screen and (min-width: $extra-small-container-width) {}
 
 // Small Devices, Tablets
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: $small-container-width) {}
 
 // Medium Devices, Desktops
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: $medium-container-width) {
+    .container {
+        width: 100%;
+    }
+}
 
 // Large Devices, Wide Screens
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: $large-container-width) {
+    .page-template-template-84-two-col-page {
+        .page-header {
+            padding-top: 35px;
+            min-height: 140px;
+        }
+    }
+}

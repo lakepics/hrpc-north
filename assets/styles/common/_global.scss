@@ -25,13 +25,13 @@ body {
 }
 
 // Extra Small Devices, Phones
-@media only screen and (min-width : 480px) {}
+@media only screen and (min-width : $extra-small-container-width) {}
 
 // Small Devices, Tablets
-@media only screen and (min-width : 768px) {}
+@media only screen and (min-width : $small-container-width) {}
 
 // Medium Devices, Desktops
-@media only screen and (min-width : 992px) {}
+@media only screen and (min-width : $medium-container-width) {}
 
 // Large Devices, Wide Screens
-@media only screen and (min-width : 1200px) {}
+@media only screen and (min-width : $large-container-width) {}
