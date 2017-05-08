@@ -28,6 +28,7 @@ use Roots\Sage\Wrapper;
             <?php include Wrapper\sidebar_path(); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>
+          <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
     <?php
