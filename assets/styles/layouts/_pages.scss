@@ -115,8 +115,9 @@
                 .col-md-4 {
                     padding: 30px;
                     section {
-                        p:last-child, ul:last-child {
-                            margin-bottom: 40px;
+                        margin-bottom: 40px;
+                        h2:after {
+                            content: ":";
                         }
                     }
                 }

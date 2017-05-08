@@ -8,12 +8,15 @@ body {
     line-height: 1.6em;
     font-size: 16px;
     h1 {}
-    h2 {
+    h2, .sidebar-nav-heading {
         font-family: $semibold-sans-serif;
         font-weight: 600;
         font-size: 28px;
         color: $dark-blue;
         margin-bottom: 15px;
+    }
+    .sidebar-nav-heading {
+        margin-top: 20px;
     }
     p {
         margin-bottom: 15px;
@@ -22,8 +25,28 @@ body {
         cursor: pointer;
         position: fixed;
         bottom: 20px;
-        right: 20px;
+        left: 60%;
         display: none;
+        z-index: 3000;
+        i {
+            display: inline-block;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            padding: 0 10px 2px;
+            color: $light-blue;
+            border: 3px solid $light-blue;
+            border-radius: 60px;
+            line-height: 1;
+        }
+        p {
+            text-align: center;
+            color: $light-blue;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+         &:hover {
+            text-decoration: none;
+        }
     }
 }
 
