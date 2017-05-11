@@ -8,15 +8,33 @@ body {
     line-height: 1.6em;
     font-size: 16px;
     h1 {}
-    h2, .sidebar-nav-heading {
+    h2,
+    .sidebar-nav-heading {
         font-family: $semibold-sans-serif;
         font-weight: 600;
         font-size: 28px;
         color: $dark-blue;
         margin-bottom: 15px;
     }
-    .sidebar-nav-heading {
-        margin-top: 20px;
+    #sidebar-nav {
+        width: 335px;
+        &.fix-sidebar-nav {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            margin-left: 230px;
+        }
+        .sidebar-nav-heading {
+            margin-top: 20px;
+        }
+        a {
+            &:hover,
+            &:active,
+            &:visited {
+                text-decoration: none;
+            }
+        }
+
     }
     p {
         margin-bottom: 15px;
@@ -25,9 +43,15 @@ body {
         cursor: pointer;
         position: fixed;
         bottom: 20px;
-        left: 60%;
+        left: 50%;
+        margin-left: 475px;
         display: none;
         z-index: 3000;
+        text-decoration: none;
+        &:hover,
+        &:active {
+            text-decoration: none;
+        }
         i {
             display: inline-block;
             margin-left: 20px;
@@ -43,9 +67,6 @@ body {
             color: $light-blue;
             text-decoration: none;
             text-transform: uppercase;
-        }
-         &:hover {
-            text-decoration: none;
         }
     }
 }

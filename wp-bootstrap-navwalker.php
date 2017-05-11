@@ -103,8 +103,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				$atts['rel']    = ! empty( $item->xfn )		? $item->xfn	: '';
 				// If item has_children add atts to a.
 				if ( $args->has_children && 0 === $depth ) {
-					$atts['href']   		= '#';
-					$atts['data-toggle']	= 'dropdown';
+                    // edited to support clickable top level menu links - http://stackoverflow.com/questions/25692514/bootstrap-how-do-i-make-dropdown-navigation-parent-links-an-active-link
+					$atts['href']   		= ! empty( $item->url ) ? $item->url : ''; // previously ='#';
+					//$atts['data-toggle']	= 'dropdown'; // remove comment to restore original behavior
 					$atts['class']			= 'dropdown-toggle';
 					$atts['aria-haspopup']	= 'true';
 				} else {

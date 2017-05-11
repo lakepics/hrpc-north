@@ -88,6 +88,7 @@
         fade: true
     });
 
+
     // Initialize Bootstrap Hover Dropdown
     $('.dropdown-toggle').dropdownHover();
 
@@ -99,7 +100,15 @@
             $('#back-to-top').fadeOut();
         }
     });
-        // scroll body to 0px on click
+    // Make sidebar nav stick once we start scrolling
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 250 ) {
+           $('#sidebar-nav').addClass("fix-sidebar-nav").fadeIn();
+        } else {
+            $('#sidebar-nav').removeClass("fix-sidebar-nav"); //.fadeOut();
+        }
+    });
+    // scroll body to 0px on click
     $('#back-to-top').click(function () {
         $('#back-to-top').tooltip('hide');
         $('body,html').animate({
@@ -145,6 +154,5 @@
                 }
             }
         });
-
 
 })(jQuery); // Fully reference jQuery after this point.
