@@ -18,7 +18,7 @@
         // All pages
         'common': {
             init: function () {
-                // JavaScript to be fired on all pages ## menu-item-133 on local -lk
+                // JavaScript to be fired on all pages
                 $('.menu-item-home a').prepend('<i id="home-menu-icon" class="fa fa-home" aria-hidden="true"></i>');
                 $('.dropdown-toggle').attr("data-hover", "dropdown");
                 $("ul.dropdown-menu").wrapInner("<span class='dropdown-nav-wrapper'></span>");
@@ -76,6 +76,8 @@
 
     // Load Events
     $(document).ready(UTIL.loadEvents);
+
+    $('.dropdown-menu .dropdown-menu').addClass('nested');
 
     // Initialize Slick Slider
     $('.hero-slider').slick({

@@ -11,9 +11,17 @@
         letter-spacing: .125em;
         text-transform: uppercase;
         border-top: 1px solid $light-blue;
-        line-height: 3em;
+        line-height: 1.6em;
+        padding: 15px 0;
+        padding-left: 50px;
+        position: relative;
         &:last-child {
             border-bottom: 1px solid $light-blue;
+        }
+        span {
+            position: absolute;
+            left: 5px;
+            top: 14px;
         }
         img {
             display: inline-block;
@@ -23,7 +31,6 @@
             line-height: 3em;
         }
         a {
-            margin-left: 10px;
             &:hover, &:active {
                 text-decoration: none;
                 color: $light-blue;
