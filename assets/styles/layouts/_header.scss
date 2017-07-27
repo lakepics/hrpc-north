@@ -3,7 +3,7 @@
 //
 // 0up
 .navbar {
-    background-color: $brand-primary;
+     background-color: $brand-primary;
     .container {
         >.navbar-header {
             margin-right: auto;
@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    border-top: 1px solid $light-blue;
+    border-top: 1px solid rgba(255,255,255,.25);
     z-index: 1;
     opacity: .99;
 }
@@ -45,7 +45,8 @@
         padding-right: 0;
     }
     .navbar {
-        font-size: 14px;
+        font-size: 12px;
+                letter-spacing: .1em;
         margin-bottom: 0;
         .container {
             width: $medium-container-width;
@@ -74,12 +75,11 @@
         >.menu-item {
             >a {
                 border-top: 3px solid rgba(255, 255, 255, 0);
-                font-family: $semibold-sans-serif;
-                font-weight: 600;
+                font-family: $sans-serif;
+                text-transform: uppercase;
                 &:hover {
                     border-top: 3px solid $ucla-gold !important;
-                    font-family: $semibold-sans-serif !important;
-                    font-weight: 600;
+                    font-family: $sans-serif !important;
                 }
             }
             &.open {
@@ -93,8 +93,7 @@
             &.active {
                 >a {
                     border-top: 3px solid $white;
-                    font-family: $semibold-sans-serif;
-                    font-weight: 600;
+                    font-family: $sans-serif;
                     color: $white;
                 }
             }
@@ -105,6 +104,7 @@
             >a:hover,
             >a:focus {
                 background-color: transparent;
+                padding: 10px 24px;
             }
             >a:hover {
                 color: $ucla-gold;
@@ -125,8 +125,7 @@
         >a {
             border-top: 3px solid $white !important;
             color: $white;
-            font-family: $semibold-sans-serif;
-            font-weight: 600;
+            font-family: $sans-serif;
         }
     }
     .current-menu-ancestor,
@@ -145,8 +144,7 @@
             >a:hover,
             >a:focus {
                 color: $ucla-gold;
-                font-family: $semibold-sans-serif;
-                font-weight: 600;
+                font-family: $sans-serif;
             }
         }
     }
@@ -154,6 +152,7 @@
         background-color: $ucla-blue;
         padding: 0;
         font-size: 14px;
+        letter-spacing: .0625em;
         border-radius: 0;
     }
     .dropdown-nav-wrapper {
@@ -187,7 +186,7 @@
             }
             a {
                 display: inline-block;
-                padding: 12px 10px;
+                padding: 12px 15px;
                 &:hover {
                     color: $ucla-gold;
                     font-family: $sans-serif;
@@ -233,13 +232,14 @@
 // Large Devices, Wide Screens
 @media only screen and (min-width: $large-container-width) {
     .navbar {
-        font-size: 16px;
+        font-size: 13px;
         .container {
             width: $large-container-width;
         }
     }
     .dropdown-menu {
-        font-size: 16px;
+        font-size: 14px;
+        letter-spacing: .0625em;
     }
     .dropdown-nav-wrapper {
         width: $large-container-width;
@@ -247,7 +247,7 @@
     .top-nav-wrapper {
         ul {
             li {
-                font-size: 16px;
+                font-size: 13px;
             }
         }
     }
