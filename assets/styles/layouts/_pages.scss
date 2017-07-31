@@ -3,73 +3,69 @@
 //
 // Styles for 0up
 .home {
-    .container-fluid {
-        padding: 0;
-        .content {
-            &.row {
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-                .main {
-                    .home-content {
-                        min-height: 650px;
-                        background-image: url('../images/bg-optimists-takeover.png'), linear-gradient(#003d6e 100px, #1d6092 300px);
-                        background-repeat: no-repeat;
-                        background-position: top left;
-                        background-size: cover;
-                        background-attachment: fixed;
-                        background-color: $dark-blue;
-                        .content-wrapper {
-                            margin-left: auto;
-                            margin-right: auto;
-                            padding: 35px;
-                            width: 1280px;
-                            min-height: 650px;
-                            background-color: $white;
-                            .col-md-8,
-                            .col-md-4 {
-                                padding: 30px;
-                            }
-                        }
-                    }
-                    .quick-links {
-                        background-color: $dark-gray;
-                        height: auto;
-                        min-height: 300px;
-                        padding: 40px 0;
-                        z-index: 900;
-                        .page-container {
-                            margin-left: auto;
-                            margin-right: auto;
-                            height: 100%;
-                            width: 1280px;
-                            display: block;
-                            div {
-                                font-size: 16px;
-                                color: $white;
-                                padding: 10px 50px;
-                                .quick-link-icon {
-                                    font-size: 50px;
-                                    padding-bottom: 20px;
-                                }
-                                p {
-                                    padding-bottom: 20px;
-                                }
-                                a {
-                                    color: $light-blue;
-                                    margin-bottom: 20px;
+    &.page-parent {
+        .content-wrapper {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 35px;
+            min-height: 650px;
+            background-color: $white;
+        }
+        .container-fluid {
+            padding: 0;
+            .content {
+                &.row {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    .main {
+                        .home-content {
+                            .content-wrapper {
+                                .col-md-8,
+                                .col-md-4 {
+                                    padding: 30px;
                                 }
                             }
                         }
-                    }
-                    .quick-links:after {
-                        position: absolute;
-                        bottom: 645px;
-                        left: 48%;
-                        content: '\25A0';
-                        transform: rotate(45deg);
-                        font-size: 125px;
-                        color: $dark-gray;
+                        .quick-links {
+                            background-color: $dark-gray;
+                            height: auto;
+                            min-height: 300px;
+                            padding: 40px 0;
+                            z-index: 900;
+                            .page-container {
+                                margin-left: auto;
+                                margin-right: auto;
+                                height: 100%;
+                                width: 1280px;
+                                display: block;
+                                div {
+                                    font-size: 16px;
+                                    color: $white;
+                                    padding: 10px 50px;
+                                    .quick-link-icon {
+                                        font-size: 50px;
+                                        padding-bottom: 20px;
+                                    }
+                                    p {
+                                        padding-bottom: 20px;
+                                    }
+                                    a {
+                                        color: $light-blue;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                        .quick-links:after {
+                            position: absolute;
+                            bottom: 645px;
+                            left: 48%;
+                            content: '\25A0';
+                            transform: rotate(45deg);
+                            font-size: 125px;
+                            color: $dark-gray;
+                        }
                     }
                 }
             }
@@ -77,7 +73,9 @@
     }
 }
 
-.page-child {
+.page-template,
+.page-child,
+.page-parent {
     background-image: url('../images/bg-optimists-takeover.png'), linear-gradient(#003d6e 100px, #1d6092 300px);
     background-repeat: no-repeat;
     background-position: top left;
@@ -87,6 +85,9 @@
     &.wp-editor {
         background-image: none;
         background-color: $white;
+    }
+    .container-fluid {
+        padding: 0;
     }
     .page-header {
         margin: 0;
@@ -103,8 +104,6 @@
         }
     }
     .wrap {
-        background-image: none;
-        background-color: $white;
         .main {
             padding-left: 0;
             padding-right: 0;
@@ -126,6 +125,18 @@
     }
 }
 
+.content-wrapper, .page-header h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-wrapper {
+    background-color: $white;
+    overflow: hidden;
+}
+.page-header {
+    border-bottom: none;
+}
+
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 
@@ -137,14 +148,34 @@
     .container {
         width: 100%;
     }
+    .content-wrapper, .page-header h1{
+        width: $medium-container-width;
+    }
+    .home {
+        &.page-parent {
+            .content-wrapper {
+                width: $medium-container-width;
+            }
+        }
+    }
 }
 
 // Large Devices, Wide Screens
 @media only screen and (min-width: $large-container-width) {
-    .page-template-template-84-two-col-page {
+    .home {
+        &.page-parent {
+            .content-wrapper {
+                width: $large-container-width;
+            }
+        }
+    }
+    .page-child {
         .page-header {
             padding-top: 35px;
             min-height: 140px;
         }
+    }
+    .content-wrapper, .page-header h1 {
+        width: $large-container-width;
     }
 }
