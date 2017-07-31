@@ -18,7 +18,7 @@
         // All pages
         'common': {
             init: function () {
-                // JavaScript to be fired on all pages ## menu-item-133 on local -lk
+                // JavaScript to be fired on all pages
                 $('.menu-item-home a').prepend('<i id="home-menu-icon" class="fa fa-home" aria-hidden="true"></i>');
                 $('.dropdown-toggle').attr("data-hover", "dropdown");
                 $("ul.dropdown-menu").wrapInner("<span class='dropdown-nav-wrapper'></span>");
@@ -77,6 +77,8 @@
     // Load Events
     $(document).ready(UTIL.loadEvents);
 
+    $('.dropdown-menu .dropdown-menu').addClass('nested');
+
     // Initialize Slick Slider
     $('.hero-slider').slick({
         autoplay: true,
@@ -87,6 +89,7 @@
         dots: true,
         fade: true
     });
+
 
     // Initialize Bootstrap Hover Dropdown
     $('.dropdown-toggle').dropdownHover();
@@ -99,7 +102,15 @@
             $('#back-to-top').fadeOut();
         }
     });
-        // scroll body to 0px on click
+    // Make sidebar nav stick once we start scrolling
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 250 ) {
+           $('#sidebar-nav').addClass("fix-sidebar-nav").fadeIn();
+        } else {
+            $('#sidebar-nav').removeClass("fix-sidebar-nav"); //.fadeOut();
+        }
+    });
+    // scroll body to 0px on click
     $('#back-to-top').click(function () {
         $('#back-to-top').tooltip('hide');
         $('body,html').animate({
@@ -145,6 +156,5 @@
                 }
             }
         });
-
 
 })(jQuery); // Fully reference jQuery after this point.
