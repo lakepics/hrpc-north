@@ -69,24 +69,28 @@ $bold-sans-serif: 'Proxima Nova Bold', 'Helvetica Neue', Helvetia, Arial, sans-s
 
 // Button - LK
 
-
+.btn {
+  border-radius: 0px !important;
+  margin-bottom: 15px !important;
+}
 .button {
-padding: 15px;
-background: #3284bf;
-color: #FFFFFF;
-font-size: 14px
+padding: 10px 15px !important;
+background: white !important;
+color: #0072c3 !important;
+border: 1px solid #0072c3 !important;
+font-size: 14px !important;
 }
 .button:hover {
-background: #1e4b87;
-color: #FEE700;
-font-size: 14px
+background: #1e4b87 !important;
+color: #FEE700 !important;
+font-size: 14px !important;
 }
 .fa-external-link {
-font-size: 1.35em;
-vertical-align: -15%;
+font-size: 1.25em !important;
+vertical-align: -15% !important;
 }
 
-
+// add 20px below button
 
 
 // Theme Specific Fonts
