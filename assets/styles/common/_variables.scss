@@ -67,6 +67,26 @@ $bold-sans-serif: 'Proxima Nova Bold', 'Helvetica Neue', Helvetia, Arial, sans-s
 }
 
 
+// Button - LK
+
+
+.button {
+padding: 15px;
+background: #3284bf;
+color: #FFFFFF;
+font-size: 14px
+}
+.button:hover {
+background: #1e4b87;
+color: #FEE700;
+font-size: 14px
+}
+.fa-external-link {
+font-size: 1.35em;
+vertical-align: -15%;
+}
+
+
 
 
 // Theme Specific Fonts
