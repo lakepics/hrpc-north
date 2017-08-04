@@ -73,6 +73,13 @@ p {
     }
 }
 
+strong {
+    font-family: $semibold-sans-serif;
+}
+
+em {
+    font-family: $italic-sans-serif;
+}
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 // Small Devices, Tablets

@@ -116,7 +116,7 @@
                     section {
                         margin-bottom: 40px;
                         h2:after {
-                            content: ":";
+                            content: "";
                         }
                     }
                 }
@@ -140,6 +140,7 @@
 .faq-heading {
     margin: 35px 0px 15px;
     font-weight: 600;
+    font-family: $semibold-sans-serif;
 }
 
 
