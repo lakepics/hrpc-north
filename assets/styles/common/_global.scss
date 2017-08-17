@@ -50,6 +50,9 @@ body {
 }
 
 a {
+    color: #2274dc;
+}
+a {
     &:hover,
     &:active,
     &:visited {
@@ -99,6 +102,13 @@ strong {
 em {
     font-family: $italic-sans-serif;
 }
+
+//font-awesome icons
+.fa-chevron-right:before {
+    position: relative;
+    top: 2px;
+}
+
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 // Small Devices, Tablets

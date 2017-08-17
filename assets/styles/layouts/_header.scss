@@ -154,6 +154,7 @@
         font-size: 15px;
         letter-spacing: .0625em;
         border-radius: 0;
+        border: none !important;
     }
     .dropdown-nav-wrapper {
         display: block;
@@ -200,7 +201,7 @@
         }
     }
     .top-nav-wrapper {
-        width: 500px;
+        width: 650px;
         float: right;
         padding-top: 10px;
         ul {
