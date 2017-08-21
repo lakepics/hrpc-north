@@ -1,4 +1,19 @@
-@import "common/variables";
+/*------------------------------------*\
+    Main - mix of all the SCSS
+\*------------------------------------*/
+
+/*
+This contains SMACSS and BEM Methodology. Created when I started to reformat the CSS 6.12.2017
+
+SMACSS
+
+Base - styles on base elements: html, body, a, ul, li, etc.
+Layouts - Grids, responsive frameworks, wrappers, etc. all live here.
+Modules - Flexible and reusable. HTML code that is used throughout website.
+Other - Code that doesn't fit in _base,_layout, or _modules. Code that we couldn't make modular.
+Shame  - something we've been trying out only recently. Reserved just for your hacky code.
+Vendor - css from libraries/vendors
+*/
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
@@ -7,18 +22,32 @@
 @import "../../bower_components/slick-carousel/slick/slick.scss";
 // endbower
 
-@import "common/global";
-@import "common/fonts";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/grid";
-@import "components/slider";
-@import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tablepress";
-@import "layouts/tinymce";
+//	Base
+@import "_base/responsive",
+		"_base/variables",
+		"_base/global",
+		"_base/fonts",
+		"_base/buttons";
+
+//	Layout
+@import "_layouts/header",
+		"_layouts/slider",
+		"_layouts/sidebar",
+		"_layouts/footer",
+		"_layouts/pages",
+		"_layouts/posts",
+		"_layouts/tinymce";
+
+//	Modules
+@import "_modules/comments",
+		"_modules/forms",
+		"_modules/grid",
+		"_modules/wp-classes";
+
+// 	Other
+
+// Shame
+@import	"_shame/test";
+
+//Vendor
+@import	"_vendor/tablepress";

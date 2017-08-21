@@ -1,0 +1,183 @@
+/*------------------------------------*\
+    Responsiveness & Media Queries
+
+No @media required for 0 -479px
+
+Styles for mobile go here…
+
+@media screen and (min-width: 480px) {
+Tablet styles go here
+}
+@media screen and (min-width: 1024px) {
+Laptop styles
+}
+@media screen and (min-width: 1200px) {
+Desktop styles
+}
+
+\*------------------------------------*/
+
+// Container Widths from skeleton theme
+$large-container-width: 1280px;
+$medium-container-width: 960px;
+$extra-small-container-width: 480px;
+$small-container-width: 768px;
+//Currently
+$zero: 0px;
+$phone-width: 480px;
+$tablet-width: 768px;
+$laptop-width: 1024px;
+$desktop-width: 1200px;
+$hamburger: 767px;
+// This is where the mixins for responsiveness will go
+// 0px - 480px
+@mixin phone {
+    @media (min-width: #{$zero}) and (max-width: #{$phone-width - 1px}) {
+        @content;
+    }
+}
+
+// 0px - 767px
+@mixin tablet {
+    @media (min-width: #{$zero}) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+// 768px - 1024px
+@mixin laptop {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+// 1024px - 1200px
+@mixin desktop {
+    @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+// 1200px ++
+@mixin HD-desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+//  0px - 768px
+@mixin max-tablet {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+//  0px - 1024px
+@mixin max-laptop {
+    @media (max-width: #{$laptop-width}) {
+        @content;
+    }
+}
+
+//  0px - 1200px
+@mixin max-desktop {
+    @media (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+
+/*------------------------------------*\
+    Min - i.e. "min-tablet"
+\*------------------------------------*/
+
+//  768px ++
+@mixin min-tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+//  1024px ++
+@mixin min-laptop {
+    @media (min-width: #{$laptop-width}) {
+        @content;
+    }
+}
+
+//  1200px ++
+@mixin min-desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+//example of use
+
+/*==========================================================================*\
+    Media Queries
+\*========================================================================== */
+
+
+/*------------------------------------*\
+    Phone: 0px - 479px
+\*------------------------------------*/
+
+@include phone {}
+
+
+/*------------------------------------*\
+    Tablet: 0px - 767px
+\*------------------------------------*/
+
+@include tablet {
+    .mobile-indicator {
+        display: none;
+    }
+}
+
+
+/*------------------------------------*\
+    Laptop: 768px - 1024px
+\*------------------------------------*/
+
+@include laptop {}
+
+
+/*------------------------------------*\
+    Desktop: 1023px - 1199px
+\*------------------------------------*/
+
+@include desktop {}
+
+
+/*------------------------------------*\
+    HD-Desktop: 1200px - infinity
+\*------------------------------------*/
+
+@include HD-desktop {}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none !important;
+    }
+}
+
