@@ -1,4 +1,6 @@
-// Grid system
+/*------------------------------------*\
+    Grid System
+\*------------------------------------*/
 .main {
   @include make-sm-column($main-sm-columns);
   .sidebar-primary & {

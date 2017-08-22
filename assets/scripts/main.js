@@ -83,8 +83,8 @@
     $('.hero-slider').slick({
         autoplay: true,
         arrows: true,
-        nextArrow: '<i class="fa fa-caret-right fa-4x" aria-hidden="true"></i>',
-        prevArrow: '<i class="fa fa-caret-left fa-4x" aria-hidden="true"></i>',
+        nextArrow: '<i class="fa fa-angle-right fa-4x" aria-hidden="true"></i>',
+        prevArrow: '<i class="fa fa-angle-left fa-4x" aria-hidden="true"></i>',
         mobileFirst: false,
         dots: true,
         fade: true

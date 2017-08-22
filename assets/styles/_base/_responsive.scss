@@ -58,6 +58,7 @@ $hamburger: 767px;
     }
 }
 
+
 // 1200px ++
 @mixin HD-desktop {
     @media (min-width: #{$desktop-width}) {
@@ -71,7 +72,6 @@ $hamburger: 767px;
         @content;
     }
 }
-
 //  0px - 1024px
 @mixin max-laptop {
     @media (max-width: #{$laptop-width}) {
@@ -86,7 +86,18 @@ $hamburger: 767px;
     }
 }
 
+//breakpoint of hamburger
+@mixin max-1280px {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
 
+@mixin min-1280px {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
 /*------------------------------------*\
     Min - i.e. "min-tablet"
 \*------------------------------------*/

@@ -11,17 +11,17 @@
                 position: absolute;
                 top: 40%; // jumbo 35%;
                 z-index: 1001;
-                &.fa-caret-right {
+                &.fa-angle-right {
                     right: 20px;
                 }
-                &.fa-caret-left {
+                &.fa-angle-left {
                     left: 20px;
                 }
             }
             .slick-dots {
                 position: absolute;
-                bottom: 5%;
-                right: 2%; // jumbo 70.5%;
+                bottom: 0px;
+                right: 5px; 
                 li {
                     list-style: none;
                     display: inline-block;

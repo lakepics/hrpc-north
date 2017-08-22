@@ -21,7 +21,7 @@
             }
             ?>
         </div>
-        <div class="col-md-4 col-xs-12"><div id="sidebar-nav">
+        <div class="col-md-4 col-xs-12 anchor_block"><div id="sidebar-nav">
             <?php
 if ( $page_content ) {
 echo '<p class="sidebar-nav-heading">On This Page:</p><ul class="sidebar-nav">';

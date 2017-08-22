@@ -1,32 +1,35 @@
-//
-// Header Styles
-//
-// 0up
+/*------------------------------------*\
+    _header.scss
+\*------------------------------------*/
+
 .navbar {
-     background-color: $brand-primary;
-    .container {
-        >.navbar-header {
-            margin-right: auto;
-            margin-left: auto;
-        }
+  background-color: $brand-primary;
+  .container {
+    >.navbar-header {
+      margin-right: auto;
+      margin-left: auto;
     }
+  }
 }
 
 .navbar-header {
-    a {
-        color: $white;
+  a {
+    color: $white;
+    @include tablet {
+      padding: 12px 0px 15px 10px;
     }
+  }
 }
 
 .divider-rule {
-    position: absolute;
-    top: 85px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    border-top: 1px solid rgba(255,255,255,.25);
-    z-index: 1;
-    opacity: .99;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid rgba(255, 255, 255, .25);
+  z-index: 1;
+  opacity: .99;
 }
 
 // Extra Small Devices, Phones
@@ -37,219 +40,236 @@
 
 // Medium Devices, Desktops
 @media only screen and (min-width: $medium-container-width) {
+  @include min-1280px {
     .navbar-header {
-        padding-top: 18px;
+      padding-top: 18px;
     }
-    .navbar-collapse {
-        padding-left: 0;
-        padding-right: 0;
+  }
+  .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar {
+    font-size: 12px;
+    letter-spacing: .1em;
+    margin-bottom: 0;
+    .container {
+      width: $medium-container-width;
+      @include min-1280px {
+        min-height: 90px;
+      }
+      padding-left: 0;
+      padding-right: 0;
+      .navbar-brand {
+        margin-left: 15px;
+      }
     }
-    .navbar {
-        font-size: 12px;
-                letter-spacing: .1em;
-        margin-bottom: 0;
-        .container {
-            width: $medium-container-width;
-            min-height: 90px;
-            padding-left: 0;
-            padding-right: 0;
-            .navbar-brand {
-                margin-left: 15px;
-            }
-        }
-    }
-    .navbar-brand {
+  }
+  .navbar-brand {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    @include min-tablet {
+      img {
+        height: 50px;
         margin: 0;
-        margin-bottom: 15px;
         padding: 0;
-        img {
-            height: 50px;
-            margin: 0;
-            padding: 0;
+        @include tablet {
+          width: 200px;
         }
+      }
     }
-    .nav {
-        li {
-            position: static;
-        }
-        >.menu-item {
-            >a {
-                border-top: 3px solid rgba(255, 255, 255, 0);
-                font-family: $sans-serif;
-                text-transform: uppercase;
-                &:hover {
-                    border-top: 3px solid $ucla-gold !important;
-                    font-family: $sans-serif !important;
-                }
-            }
-            &.open {
-                >a {
-                    border-top-color: $white;
-                }
-                .dropdown-menu {
-                    z-index: 2000;
-                }
-            }
-            &.active {
-                >a {
-                    border-top: 3px solid $white;
-                    font-family: $sans-serif;
-                    color: $white;
-                }
-            }
-        }
-        .open,
-        >li {
-            >a,
-            >a:hover,
-            >a:focus {
-                background-color: transparent;
-                padding: 10px 24px;
-            }
-            >a:hover {
-                color: $ucla-gold;
-                font-family: $sans-serif;
-            }
-        }
-        .caret {
-            display: none;
-        }
+  }
+  .nav {
+    li {
+      position: static;
     }
-    .active,
-    .current-menu-ancestor {
-        >.dropdown-menu {
-            display: block;
-        }
-    }
-    .current-menu-ancestor {
-        >a {
-            border-top: 3px solid $white !important;
-            color: $white;
-            font-family: $sans-serif;
-        }
-    }
-    .current-menu-ancestor,
-    .active,
-    .open {
-        >.dropdown-menu {
-            width: 100%;
-        }
-    }
-    .menu-item {
+    >.menu-item {
+      >a {
+        border-top: 3px solid rgba(255, 255, 255, 0);
+        font-family: $sans-serif;
+        text-transform: uppercase;
         &:hover {
+          border-top: 3px solid $ucla-gold !important;
+          font-family: $sans-serif !important;
         }
-        &.active {
-            // border-top: 3px solid $ucla-gold;
-            >a,
-            >a:hover,
-            >a:focus {
-                color: $ucla-gold;
-                font-family: $sans-serif;
-            }
+      }
+      &.open {
+        >a {
+          border-top-color: $white;
         }
+        .dropdown-menu {
+          z-index: 2000;
+        }
+      }
+      &.active {
+        >a {
+          border-top: 3px solid $white;
+          font-family: $sans-serif;
+          color: $white;
+        }
+      }
     }
-    .dropdown-menu {
-        background-color: $ucla-blue;
-        padding: 0;
-        font-size: 15px;
-        letter-spacing: .0625em;
-        border-radius: 0;
-        border: none !important;
+    .open,
+    >li {
+      >a,
+      >a:hover,
+      >a:focus {
+        background-color: transparent;
+        padding: 10px 24px;
+      }
+      >a:hover {
+        color: $ucla-gold;
+        font-family: $sans-serif;
+      }
     }
+    .caret {
+      display: none;
+    }
+  }
+  .active,
+  .current-menu-ancestor {
+    >.dropdown-menu {
+      display: block;
+    }
+  }
+  .current-menu-ancestor {
+    >a {
+      border-top: 3px solid $white !important;
+      color: $white;
+      font-family: $sans-serif;
+    }
+  }
+  .current-menu-ancestor,
+  .active,
+  .open {
+    >.dropdown-menu {
+      width: 100%;
+    }
+  }
+  .menu-item {
+    &:hover {}
+    &.active {
+      // border-top: 3px solid $ucla-gold;
+      >a,
+      >a:hover,
+      >a:focus {
+        color: $ucla-gold;
+        font-family: $sans-serif;
+      }
+    }
+  }
+  .dropdown-menu {
+    background-color: $ucla-blue;
+    padding: 0;
+    font-size: 15px;
+    letter-spacing: .0625em;
+    border-radius: 0;
+    border: none !important;
+  }
+  .dropdown-nav-wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: $medium-container-width;
     .dropdown-nav-wrapper {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: $medium-container-width;
-        .dropdown-nav-wrapper {
-            width: auto;
-        }
-        li {
-            display: inline-block;
-            position: relative;
-            .dropdown-menu {
-                width: auto;
-                white-space: nowrap;
-                border-radius: 0;
-                position: absolute;
-                top: 44px;
-                left: 0;
-                border-top: 3px solid rgba(255, 255, 255, 0);
-                a {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-            }
-            &:hover {
-                .dropdown-menu {
-                    display: inline-block;
-                }
-            }
-            a {
-                display: inline-block;
-                padding: 12px 15px;
-                &:hover {
-                    color: $ucla-gold;
-                    font-family: $sans-serif;
-                }
-            }
-        }
-        .nested {
-            li {
-                display: list-item;
-            }
-        }
+      width: auto;
     }
-    .top-nav-wrapper {
-        width: 650px;
-        float: right;
-        padding-top: 10px;
-        ul {
-            float: right;
-            li {
-                list-style: none;
-                display: inline;
-                font-size: 14px;
-                font-family: $sans-serif;
-                text-align: right;
-                a,
-                a:hover,
-                a:focus {
-                    color: $white;
-                    margin-right: 30px;
-                    border-top: none;
-                }
-                #home-menu-icon {
-                    margin-right: 10px;
-                }
-            }
-            li:last-child {
-                margin-right: 0;
-            }
+    li {
+      display: inline-block;
+      position: relative;
+      .dropdown-menu {
+        width: auto;
+        white-space: nowrap;
+        border-radius: 0;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        border-top: 3px solid rgba(255, 255, 255, 0);
+        a {
+          padding-left: 10px;
+          padding-right: 10px;
         }
+      }
+      &:hover {
+        .dropdown-menu {
+          display: inline-block;
+        }
+      }
+      a {
+        display: inline-block;
+        padding: 12px 15px;
+        &:hover {
+          color: $ucla-gold;
+          font-family: $sans-serif;
+        }
+      }
     }
+    .nested {
+      li {
+        display: list-item;
+      }
+    }
+  }
+  .top-nav-wrapper {
+    width: 650px;
+    float: right;
+    padding-top: 10px;
+    ul {
+      float: right;
+      li {
+        list-style: none;
+        display: inline;
+        font-size: 14px;
+        font-family: $sans-serif;
+        text-align: right;
+        a,
+        a:hover,
+        a:focus {
+          color: $white;
+          margin-right: 30px;
+          border-top: none;
+        }
+        #home-menu-icon {
+          margin-right: 10px;
+        }
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+//Mobile Responsiveness - Mixins
+//max-desktop used to fix the issue with the tripple nav collapsing below 1280px. However, gives a bald spot of 80px;
+@include max-1280px {
+  #top-nav {
+    display: none;
+  }
 }
 
 // Large Devices, Wide Screens
 @media only screen and (min-width: $large-container-width) {
-    .navbar {
+  .navbar {
+    font-size: 13px;
+    .container {
+      width: $large-container-width;
+    }
+  }
+  .dropdown-menu {
+    font-size: 14px;
+    letter-spacing: .0625em;
+  }
+  .dropdown-nav-wrapper {
+    width: $large-container-width;
+  }
+  .top-nav-wrapper {
+    ul {
+      li {
         font-size: 13px;
-        .container {
-            width: $large-container-width;
-        }
+      }
     }
-    .dropdown-menu {
-        font-size: 14px;
-        letter-spacing: .0625em;
-    }
-    .dropdown-nav-wrapper {
-        width: $large-container-width;
-    }
-    .top-nav-wrapper {
-        ul {
-            li {
-                font-size: 13px;
-            }
-        }
-    }
+  }
 }
