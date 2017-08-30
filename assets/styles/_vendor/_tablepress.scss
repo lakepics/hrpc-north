@@ -1,23 +1,39 @@
 /*------------------------------------*\
     Tablress Plugin
 \*------------------------------------*/
+
 // 1
 #tablepress-1 {
-
+  .column-1,
+  .column-2,
+  .column-3,
+  .column-4 {
+    border-right: 1px solid #ddd;
+  }
+  tbody {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
   th.column-1.sorting_disabled {
     width: 25%;
   }
 }
 
-#tablepress-1 > tbody > tr.row-5 > td.column-1 {
-	vertical-align: middle !important;
-}
-#tablepress-1 > tbody > tr.row-24 > td.column-1 {
-	vertical-align: middle !important;
+#tablepress-1>tbody>tr.row-6>td.column-1,
+#tablepress-1>tbody>tr.row-15>td.column-1,
+#tablepress-1>tbody>tr.row-18>td.column-1,
+#tablepress-1>tbody>tr.row-23>td.column-1 {
+  vertical-align: middle !important;
 }
 
+// #tablepress-1 > tbody > tr.row-5 > td.column-1 {
+// 	vertical-align: middle !important;
+// }
+// #tablepress-1 > tbody > tr.row-24 > td.column-1 {
+// 	vertical-align: middle !important;
+// }
 //2
-
-#tablepress-2 > thead > tr > th.column-1 {
-	width: 33% !important;
+#tablepress-2>thead>tr>th.column-1 {
+  width: 33% !important;
 }

@@ -9,7 +9,7 @@
 <?php get_template_part('templates/content', 'page'); ?>
     <div class="content-wrapper">
         <?php get_template_part('templates/component', 'back-to-top'); ?>
-        <div class="col-md-8 col-xs-12">
+        <div class="col-md-8 col-xs-12 dual-col">
             <?php $page_content = get_field('content');
             if ( $page_content )  {
                 foreach ($page_content as $section) {

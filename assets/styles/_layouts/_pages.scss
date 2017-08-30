@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    Default Page Template Styles
+Default Page Template Styles
 \*------------------------------------*/
 
 .home {
@@ -8,7 +8,7 @@
       margin-left: auto;
       margin-right: auto;
       padding: 35px;
-      min-height: 650px;
+      min-height: 560px;
       background-color: $white;
       @include max-laptop {
         padding: 20px 35px;
@@ -60,7 +60,7 @@
             }
             .quick-links:after {
               position: absolute;
-              bottom: 655px;
+              bottom: 560px;
               left: 48%;
               content: '\25A0';
               transform: rotate(45deg);
@@ -114,7 +114,7 @@
     min-height: 140px;
     background: $darker-blue;
     color: $white;
-    @include tablet {
+    @include max-1280px {
       padding: 10px 25px !important;
       min-height: 42px !important;
     }
@@ -123,10 +123,9 @@
       font-weight: 400;
       font-size: 40px;
       line-height: 106px;
-      @include tablet {
+      @include max-1280px {
         font-size: 28px;
-        line-height: 30px;
-        margin: 10px 0px;
+        line-height: 30px; //margin: 10px 0px;
       }
     }
   }
@@ -137,13 +136,13 @@
       .content-wrapper {
         padding-left: 35px;
         padding-right: 35px;
-        @include tablet {
+        @include max-1280px {
           padding: 15px 25px;
         }
         .col-md-8,
         .col-md-4 {
           padding: 30px;
-          @include tablet {
+          @include max-1280px {
             padding: 0px
           }
           section {
@@ -161,10 +160,37 @@
   }
 }
 
+//fo anchored col
+.dual-col {
+  padding-left: 0 !important;
+  @include max-1280px {
+    padding: 0px;
+  }
+}
+
+.anchor_block {
+  padding: 30px 0 0 0 !important;
+  @include max-1280px {
+    display : none;
+  }
+}
+
 //QUicklinks
 .quicklink-content-p {
   padding: 10px 0px 0px 0px;
   margin-bottom: 5px !important;
+}
+
+@include tablet {
+  .quick-link-icon {
+    font-size: 45px;
+  }
+}
+
+@include phone {
+  .quick-link-icon {
+    font-size: 30px;
+  }
 }
 
 .ql-anchor {
@@ -307,12 +333,6 @@
       width: 100%;
     }
   }
-  .navbar-header {
-    img {
-      top: 0px;
-      position: absolute;
-    }
-  }
 
   nav {
     margin-top: 30px;
@@ -324,9 +344,7 @@
   }
 }
 
-@include min-laptop {
-
-}
+@include min-laptop {}
 
 //controlling the navbar collapse dropdown- found this to be the best solution. -GS
 @include tablet {
@@ -379,5 +397,14 @@
         padding: 5px 0 0;
       }
     }
+  }
+}
+
+
+@media only screen and (min-width: 1280px) and (min-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+    margin: 0;
+    padding: 0;
   }
 }

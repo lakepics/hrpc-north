@@ -16,8 +16,8 @@ footer {
     padding: 0 50px;
     max-width: 1280px;
     @include tablet {
-     margin: 15px 0px;
-     padding: 0 25px;
+      margin: 15px 0px;
+      padding: 0 25px;
     }
     .logo {
       margin-top: 50px;
@@ -27,7 +27,6 @@ footer {
         max-width: 260px;
         margin: 10px 0px;
         width: 100%;
-
       }
     }
     .phone {
@@ -44,6 +43,10 @@ footer {
         font-family: $sans-serif;
         font-size: 16px;
       }
+    }
+    .address {
+      font-size: 16px;
+      font-family: $italic-sans-serif;
     }
     .email {
       font-size: 16px;
@@ -63,14 +66,33 @@ footer {
       text-align: center;
       font-size: 14px;
       color: #c7c7c7;
-      padding-top: 15px;
+      padding-top: 5px;
       @include tablet {
         display: none;
+      }
+    }
+    .feedback {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      color: #e0e0e0;
+      padding-top: 15px;
+      @include tablet {
+        margin-top: 60px;
+      }
+      a {
+        color: #b2d1ff;
       }
     }
   }
 }
 
+.bottom-footer-section {
+  border-top: 1px solid #5577a4;
+  width: 180px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
 
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}

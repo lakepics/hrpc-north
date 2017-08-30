@@ -1,3 +1,26 @@
 /*------------------------------------*\
     Slider.scss
 \*------------------------------------*/
+
+//custom arrow
+
+
+.overlay-container {
+	&:focus {
+		outline: 0 !important	;
+		color: none;
+		border: none;
+	}
+}
+
+
+button:focus { outline:0 !important; }
+
+div:focus { outline:0 !important; }
+*:focus {outline:none !important}
+
+.slick-slide {
+outline: none !important;
+}
+
+.slick-slide:focus { outline: none; }

@@ -11,19 +11,13 @@
 <div class="home-content">
     <div class="content-wrapper">
     <div class="row">
-    <div class="col-md-12 padding-30px">
+    <div class="col-md-12">
             <?php echo '<h2>' . get_field('first_row_header') . '</h2>';
                 echo get_field('first_row_content');
             ?>
             </div>
     </div>
-    <div class="row">
-            <?php 
-              echo get_field('bottom_row_content');
-            ?>
-        </div>
         </div>
     </div>
-</div>
 
 <?php endwhile; ?>
