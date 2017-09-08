@@ -7,21 +7,23 @@ footer {
   color: $white;
   min-height: 240px;
   font-size: 18px;
+  line-height: 1.3em;
+  padding-bottom: 20px;
   @include phone {
     min-height: 100%;
   }
   .widget {
     margin-left: auto;
     margin-right: auto;
-    padding: 0 50px;
+    padding: 0 35px;
     max-width: 1280px;
     @include tablet {
       margin: 15px 0px;
       padding: 0 25px;
     }
     .logo {
-      margin-top: 50px;
-      margin-bottom: 15px;
+      margin-top: 30px;
+      margin-bottom: 20px;
       height: 50px;
       @include phone {
         max-width: 260px;
@@ -30,7 +32,8 @@ footer {
       }
     }
     .phone {
-      font-size: 16px;
+      font-size: 15px;
+      white-space: nowrap;
       a {
         font-family: $sans-serif;
         color: $white;
@@ -38,18 +41,20 @@ footer {
       }
     }
     .fax {
-      font-size: 16px;
+       font-size: 15px;
+      white-space: nowrap;
       span {
         font-family: $sans-serif;
         font-size: 16px;
       }
     }
     .address {
-      font-size: 16px;
-      font-family: $italic-sans-serif;
+      font-size: 15px;
+      white-space: nowrap;
     }
     .email {
-      font-size: 16px;
+         font-size: 15px;;
+      white-space: nowrap;
       a {
         font-family: $sans-serif;
         font-size: 16px;
@@ -62,23 +67,48 @@ footer {
       color: $white;
     }
     .copyright {
-      display: block;
-      text-align: center;
       font-size: 14px;
-      color: #c7c7c7;
-      padding-top: 5px;
+      color: #d8d8d8;
+      text-align: left;
+      font-size: 14px;
       @include tablet {
         display: none;
+      }
+      &:after {
+        content: '|';
+        margin: 0 6px 0 10px;
+      }
+      &:hover {
+        a {
+          color: #b2d1ff;
+          text-decoration: underline;
+        }
+      }
+    }
+    .copyright-link {
+      font-size: 14px;
+      color: #e0e0e0;
+      text-align: left;
+      font-size: 14px;
+      @include tablet {
+        display: none;
+      }
+      &:hover {
+        a {
+          color: #b2d1ff;
+          text-decoration: underline;
+        }
       }
     }
     .feedback {
       display: block;
       text-align: center;
-      font-size: 16px;
+      font-size: 15px;
       color: #e0e0e0;
-      padding-top: 15px;
+      padding: 15px 0px;
+      text-align: left;
       @include tablet {
-        margin-top: 60px;
+        display: none;
       }
       a {
         color: #b2d1ff;
@@ -87,11 +117,36 @@ footer {
   }
 }
 
+//breakpoint 990px
+.contact-footer {}
+
+.contact-address {}
+
+@media screen and (min-width: 990px) {
+  .contact-address {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .contact-address {
+    padding-top: 15px;
+  }
+}
+
+
+.top-footer-section {
+  float: left;
+  padding: 0px 15px 15px 15px;
+}
+
 .bottom-footer-section {
-  border-top: 1px solid #5577a4;
-  width: 180px;
-  padding-top: 10px;
-  margin-top: 10px;
+  float: left;
+  padding-left: 30px;
+  padding: 0px 15px;
+  @include min-tablet {
+    padding-left: 75px;
+  }
 }
 
 // Extra Small Devices, Phones

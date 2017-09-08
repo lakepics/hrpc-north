@@ -87,7 +87,13 @@
         prevArrow: '<i class="fa fa-angle-left fa-4x" aria-hidden="true"></i>',
         mobileFirst: false,
         dots: true,
-        fade: true
+        fade: true,
+        speed: 200,
+        autoplaySpeed: 8000,
+        easing: true,
+        pauseOnHover: true,
+        swipe: true,
+        cssEase: 'ease',
     });
 
 

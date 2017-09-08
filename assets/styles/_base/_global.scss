@@ -27,7 +27,7 @@ h5,
 body {
   font-family: $sans-serif;
   font-weight: 400;
-  line-height: 1.6em;
+  line-height: 1.8em;
   font-size: 16px;
   h1 {}
   h2,
@@ -40,7 +40,7 @@ body {
   }
   #sidebar-nav {
     width: 100%;
-    max-width:  402px;
+    max-width: 402px;
     &.fix-sidebar-nav {
       position: fixed;
       top: 50px;
@@ -54,14 +54,15 @@ body {
 }
 
 //sidebar responsive
-@media  screen and (min-width: 991px) and (max-width: 1280px) {
+@media screen and (min-width: 991px) and (max-width: 1280px) {
 
   .page-header {
     h1 {
-        padding-left:   25px ;
+      padding-left: 25px;
     }
   }
 }
+
 a {
   color: #2274dc;
 }
@@ -164,11 +165,15 @@ ol {
   .content-wrapper {
     .col-md-12 {
       padding: 30px 0;
-       @include max-laptop {
+      @include max-laptop {
         padding: 0px !important;
       }
     }
   }
+}
+
+.content-wrapper{
+ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 // Extra Small Devices, Phones

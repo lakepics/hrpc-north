@@ -43,3 +43,9 @@ function dump($var)
     echo '</pre>';
 }
 
+//change the title from dash to pipe
+function wploop_change_separator()
+{
+return '|';
+}
+add_filter('document_title_separator', 'wploop_change_separator');

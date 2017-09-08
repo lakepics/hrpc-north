@@ -2,6 +2,17 @@
     Tablress Plugin
 \*------------------------------------*/
 
+.tablepress {
+  thead {
+    th {
+      color: white !important;
+      background-color: $brand-primary !important;
+      font-family: $sans-serif !important;
+      letter-spacing: 2px;
+       border-right: 1px solid #ddd;
+    }
+  }
+}
 // 1
 #tablepress-1 {
   .column-1,
