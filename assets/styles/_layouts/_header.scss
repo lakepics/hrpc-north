@@ -2,6 +2,8 @@
     _header.scss
 \*------------------------------------*/
 
+
+
 .navbar {
   background-color: $brand-primary;
   .container {
@@ -12,11 +14,14 @@
   }
 }
 
+.navbar-brand {
+  padding:  0px;
+}
 .navbar-header {
   a {
     color: $white;
     @include tablet {
-      padding: 12px 0px 15px 10px;
+      padding: 0px;
     }
   }
 }
@@ -71,8 +76,8 @@
     padding: 0;
     @include min-tablet {
       img {
-        height: 50px;
-        margin: 0;
+        height: 36px;
+        margin: 7px 0px;
         padding: 0;
         @include tablet {
           width: 200px;
