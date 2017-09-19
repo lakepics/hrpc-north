@@ -306,113 +306,14 @@ Default Page Template Styles
 }
 
 //mobile logo
-@include max-1280px {
+@include tablet {
   .navbar-brand {
     float: none;
     img {
       max-width: 250px;
-      width: 100%; // top:  10px;
+      width: 100%;
+      // top:  10px;
       // position:   absolute;
     }
-  }
-}
-
-//controll how the logo appears between 768px and 1199px;
-
-@include laptop {
-  .navbar {
-    .container {
-      width: 100%;
-      padding-left: 25px;
-      padding-right: 25px;
-      height: 50px;
-      .navbar-brand {
-        margin: 0px;
-      }
-    }
-  }
-  .navbar-brand {
-    float: none;
-    img {
-      max-width: 250px;
-      width: 100%;
-      height: 36px;
-      margin: 7px 0;
-      padding: 0;
-    }
-  }
-
-  nav {
-    margin-top: 30px;
-    width: 100%;
-  }
-
-  .divider-rule {
-    display: none;
-  }
-}
-
-@include min-laptop {}
-
-//controlling the navbar collapse dropdown- found this to be the best solution. -GS
-@include tablet {
-  .navbar-header {
-    img {
-      margin: 13px 0px;
-      position: absolute;
-    }
-  }
-
-  nav {
-    margin-top: 23px;
-    width: 100%;
-  }
-
-  .divider-rule {
-    display: none;
-  }
-}
-
-//fix the dropdown alignment to have 25x on left and right up until the tablet 
-@include tablet {
-  .navbar {
-    .container {
-      padding-left: 15px !important;
-      padding-right: 15px !important;
-    }
-  }
-
-  .navbar-nav {
-    li {
-      a {
-        padding: 10px 10px;
-      }
-    }
-  }
-
-  .navbar-toggle {
-    margin-right: 0px !important;
-    padding: 9px 0px !important;
-  }
-}
-
-//quicklinks homepage edits
-@include tablet {
-  .quick-links {
-    padding: 5px 0px !important;
-    .center-block {
-      .quicklink-content-p {
-        padding: 5px 0 0;
-      }
-    }
-  }
-}
-
-
-@media only screen and (min-width: 1280px) and (min-width: 768px) {
-  .navbar-brand img {
-    height: 50px;
-    margin: 0;
-    padding: 0;
   }
 }
