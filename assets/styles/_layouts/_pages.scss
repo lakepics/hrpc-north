@@ -171,7 +171,7 @@ Default Page Template Styles
 .anchor_block {
   padding: 30px 0 0 0 !important;
   @include max-1280px {
-    display : none;
+    display: none;
   }
 }
 
@@ -306,28 +306,28 @@ Default Page Template Styles
 }
 
 //mobile logo
-@include tablet {
+@include max-1280px {
   .navbar-brand {
     float: none;
     img {
       max-width: 250px;
-      width: 100%;
-// top:  10px;
+      width: 100%; // top:  10px;
       // position:   absolute;
     }
   }
 }
 
 //controll how the logo appears between 768px and 1199px;
+
 @include laptop {
   .navbar {
     .container {
       width: 100%;
       padding-left: 25px;
       padding-right: 25px;
-      height:   50px;
+      height: 50px;
       .navbar-brand {
-        margin:   0px;
+        margin: 0px;
       }
     }
   }
@@ -337,8 +337,8 @@ Default Page Template Styles
       max-width: 250px;
       width: 100%;
       height: 36px;
-    margin: 7px 0;
-    padding: 0;
+      margin: 7px 0;
+      padding: 0;
     }
   }
 
@@ -358,7 +358,7 @@ Default Page Template Styles
 @include tablet {
   .navbar-header {
     img {
-      top: 10px;
+      margin: 13px 0px;
       position: absolute;
     }
   }
@@ -377,15 +377,15 @@ Default Page Template Styles
 @include tablet {
   .navbar {
     .container {
-      padding-left: 25px !important;
-      padding-right: 25px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
     }
   }
 
   .navbar-nav {
     li {
       a {
-        padding: 10px 0px;
+        padding: 10px 10px;
       }
     }
   }

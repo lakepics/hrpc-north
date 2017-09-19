@@ -22,9 +22,9 @@ footer {
       padding: 0 25px;
     }
     .logo {
-      margin-top: 30px;
+      margin-top: 20px;
       margin-bottom: 20px;
-      height: 50px;
+      height: 40px;
       @include phone {
         max-width: 260px;
         margin: 10px 0px;
@@ -41,7 +41,7 @@ footer {
       }
     }
     .fax {
-       font-size: 15px;
+      font-size: 15px;
       white-space: nowrap;
       span {
         font-family: $sans-serif;
@@ -53,7 +53,8 @@ footer {
       white-space: nowrap;
     }
     .email {
-         font-size: 15px;;
+      font-size: 15px;
+      ;
       white-space: nowrap;
       a {
         font-family: $sans-serif;

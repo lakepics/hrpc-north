@@ -2,8 +2,6 @@
     _header.scss
 \*------------------------------------*/
 
-
-
 .navbar {
   background-color: $brand-primary;
   .container {
@@ -15,8 +13,9 @@
 }
 
 .navbar-brand {
-  padding:  0px;
+  padding: 0px;
 }
+
 .navbar-header {
   a {
     color: $white;
@@ -71,8 +70,7 @@
     }
   }
   .navbar-brand {
-    margin: 0;
-    //margin-bottom: 15px;
+    margin: 0; //margin-bottom: 15px;
     padding: 0;
     @include min-tablet {
       img {
@@ -280,20 +278,30 @@
 }
 
 
+
+
 /*------------------------------------*\
   Responsive Hamburger - breaks at 1280px
 \*------------------------------------*/
 
+
+//dropdown color
+.nav>li>a:focus,
+.nav>li>a:hover {
+  text-decoration: none;
+  background-color: #00284a;
+}
+
 // Desktop navbar- needs margin  bottom 15px;
 // 120px - infinte
-  @include min-1280px {
-    .navbar-brand {
-      margin-bottom: 15px;
-    }
+@include min-1280px {
+  .navbar-brand {
+    margin-bottom: 15px;
   }
+}
 
 //collapse navbar ealier
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1280px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
