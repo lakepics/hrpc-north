@@ -66,6 +66,7 @@
 
 
 
+
 /*------------------------------------*\
   Responsive: 1280px - Infinity
 \*------------------------------------*/
@@ -290,6 +291,7 @@
 
 
 
+
 /*------------------------------------*\
   Responsive Hamburger - breaks at 1280px
 \*------------------------------------*/
@@ -469,6 +471,8 @@ Master:  0px - 1280px
     li {
       a {
         padding: 10px 25px;
+        border-bottom: 1px solid transparent;
+        box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .1);
       }
     }
   }
