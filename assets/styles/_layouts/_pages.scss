@@ -36,6 +36,7 @@ Default Page Template Styles
               min-height: 220px;
               padding: 40px 0;
               z-index: 900;
+                position: relative;
               .page-container {
                 margin-left: auto;
                 margin-right: auto;
@@ -60,7 +61,7 @@ Default Page Template Styles
             }
             .quick-links:after {
               position: absolute;
-              bottom: 560px;
+              bottom: 0px;
               left: 48%;
               content: '\25A0';
               transform: rotate(45deg);
