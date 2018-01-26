@@ -135,8 +135,8 @@ Default Page Template Styles
       padding-left: 0;
       padding-right: 0;
       .content-wrapper {
-        padding-left: 35px;
-        padding-right: 35px;
+        padding-left: 50px;
+        padding-right: 50px;
         @include max-1280px {
           padding: 15px 25px;
         }
@@ -246,11 +246,38 @@ Default Page Template Styles
   }
 }
 
+
+
+
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 
 // Small Devices, Tablets
-@media only screen and (min-width: $small-container-width) {}
+@media only screen and (min-width: $small-container-width) {
+    
+// homepage
+    .home-content {
+        &__news-wrapper {
+            padding-right: 0px;
+            p {
+              margin-bottom: 30px !important;
+              hyphens: none;
+            }
+            h2 {
+              margin-bottom:  30px !important ;
+            }
+        }
+        &__news-updates {
+            padding: 15px 30px;
+            background: rgba(0,165,229,.15);
+        }
+        &__intro-wrapper {
+            padding-right: 25px;
+        }
+        &__intro-text {}
+    }
+    
+}
 
 // Medium Devices, Desktops
 @media only screen and (min-width: $medium-container-width) {
