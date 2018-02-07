@@ -250,7 +250,79 @@ Default Page Template Styles
 
 
 // Extra Small Devices, Phones
-@media only screen and (min-width: $extra-small-container-width) {}
+@media only screen and (max-width: $small-container-width) {
+
+
+//mobile news and announcements -- Singh
+// homepage
+  .home-content {
+    &__news-wrapper {
+      padding-right: 0px;
+      &__heading {
+        margin-bottom: 15px !important;
+        border-bottom: 1px solid #00A5e5;
+        padding-bottom: 20px;
+      }
+      &:last-child {
+        border-bottom: none !important;
+      }
+      &__single {
+        border-bottom: 1px solid #00A5e5;
+        padding-bottom: 15px;
+        margin-bottom: 35px;
+        &:last-of-type {
+          border-bottom: none;
+        }
+        &-date {
+          font-size: 14px;
+          color: #7a7a7a;
+        }
+        &-read {}
+        p {
+          margin-bottom: 10px !important;
+          hyphens: none;
+          line-height: 1.2em;
+        }
+        h4 {
+          margin-top: 0px !important;
+          font-family: $bold-sans-serif;
+        }
+      }
+    }
+    &__news-updates {
+      padding: 15px 30px !important;
+      border: 1px solid #00A5e5;
+      margin-top: 25px;
+    }
+    &__intro-wrapper {
+      padding-right: 25px;
+    }
+    &__intro-text {}
+
+    &__button {
+      padding: 10px 0px;
+      text-align: center;
+      border: 1px solid #00a5e5;
+      border-radius: 5px;
+      font-family: $bold-sans-serif;
+      color: #00a5e5;
+      font-size: 16px;
+      &:hover {
+        color: #ffe800 !important;
+        background-color: #1e4b87;
+        -webkit-transition: background-color 150ms linear;
+        -ms-transition: background-color 150ms linear;
+        transition: background-color 150ms linear;
+      }
+    }
+  }
+  .ql-anchor {
+    &:hover {
+      color: #1e4b87 !important;
+      font-family: $bold-sans-serif;
+    }
+  }
+}
 
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
@@ -259,7 +331,7 @@ Default Page Template Styles
   .home-content {
     &__news-wrapper {
       padding-right: 0px;
-      h2 {
+      &__heading {
         margin-bottom: 15px !important;
         border-bottom: 1px solid #00A5e5;
         padding-bottom: 20px;
@@ -290,14 +362,17 @@ Default Page Template Styles
         }
       }
     }
+
     &__news-updates {
-      padding: 15px 30px;
+      padding: 15px 30px !important;
       border: 1px solid #00A5e5;
       margin-top: 25px;
     }
+
     &__intro-wrapper {
       padding-right: 25px;
     }
+
     &__intro-text {}
 
     &__button {
@@ -309,12 +384,18 @@ Default Page Template Styles
       color: #00a5e5;
       font-size: 16px;
       &:hover {
-        color: #ffe800!important;
+        color: #ffe800 !important;
         background-color: #1e4b87;
         -webkit-transition: background-color 150ms linear;
         -ms-transition: background-color 150ms linear;
         transition: background-color 150ms linear;
       }
+    }
+  }
+  .ql-anchor {
+    &:hover {
+      color: #1e4b87 !important;
+      font-family: $bold-sans-serif;
     }
   }
 }
