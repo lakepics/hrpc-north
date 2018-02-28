@@ -27,7 +27,7 @@ $news= get_field('news');
             echo '<div class="home-content__news-wrapper__single-date">' . $new['date'] . '</div>';      
                 echo '<h4>' . $new['heading'] . '</h4>';      
                 echo '<p>' . $new['content'] . '...</p>';
-                echo '<div class="home-content__news-wrapper__single-read"><a href="' . $new['link'] . '"><span class="ql-anchor" php="">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>';
+                echo '<div class="home-content__news-wrapper__single-read"><a href="' . $new['link'] . '"target="_blank" ><span class="ql-anchor" php="">Read More <i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>';
                 echo '</div>';
         echo '</div>';
     }
