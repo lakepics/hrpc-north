@@ -87,8 +87,10 @@
     <div class="row">
         <div class="col-md-12">
             <h4>Shortcodes</h4>
-            <h5>Button Shortcodes - Notice the "External button" and "Download Button" above text editor.  Clicking on it will apply the shortcode in text editor automatically.</h5>
-            <a href="http://hrpcnorth-dev.hhs.ucla.edu/wp-content/uploads/2018/02/qt2.png" target="_blank"><img class="max-width-image padding-25" src="http://hrpcnorth-dev.hhs.ucla.edu/wp-content/uploads/2018/02/qt2.png"></a>
+            <p><strong>Note:</strong> Click on "External button" and "Download Button" above text editor to apply a shortcode in the text editor. It makes it easy to create a button - just fill in the URL and Button text. Make sure to include "http://" or "https://" inside the Url field.</p>
+            <a href="http://hrpcnorth-dev.hhs.ucla.edu/wp-content/uploads/2017/04/sg1-1.png" target="_blank"><img class="max-width-image padding-25" src="http://hrpcnorth-dev.hhs.ucla.edu/wp-content/uploads/2017/04/sg1-1.png" style="
+    padding-right: 30px;
+"></a>
         </div>
     </div>
 <hr class="ts-divider" style="margin-top:30px;margin-bottom:40px;">
@@ -251,7 +253,7 @@ ol {
     <h2>Templates Styles</h2>
     <div class="row">
         <div class="col-md-8">
-            <a href="http://hrpcnorth.ucla.edu/wp-content/uploads/2018/02/sg1.png" target="_blank"><img class="max-width-image padding-25 shadow-one" src="http://hrpcnorth.ucla.edu/wp-content/uploads/2018/02/sg1.png"></a>
+            <a href="http://hrpcnorth-dev.hhs.ucla.edu/wp-content/uploads/2017/04/sg1.png" target="_blank"><img class="max-width-image padding-25 shadow-one" src="http://hrpcnorth-dev.hhs.ucla.edu/wp-content/uploads/2017/04/sg1.png"></a>
 
             <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
